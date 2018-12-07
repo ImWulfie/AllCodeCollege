@@ -1,5 +1,6 @@
 ## This is used to define where the inputted data will be stored
 ## For instance when the employee name will be saved under "self.name"
+import time
 class Users():
 
     def __init__(self):
@@ -7,8 +8,16 @@ class Users():
         self.cars_sold = 0
 
     def add_employee(self):
-        self.name = input("Please enter the employees name ")
-        self.cars_sold = int(input("Please enter the amount of cars sold by this employee "))
+        while True:
+            self.name = input("Please enter the employees name ")
+            if self.name.isalpha():
+                self.cars_sold = input("Please enter the amount of cars sold by this employee ")
+                if self.cars_sold.isdigit():
+                    break
+                else:
+                    print("Please enter the details again!!")
+                    print("")
+                    time.sleep(2)
 
     def GetEmployee(self):
         return(f'Employee Name: {self.name} | Total Cars Sold: {self.cars_sold}')
