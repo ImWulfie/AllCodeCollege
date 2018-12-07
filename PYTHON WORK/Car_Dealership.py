@@ -28,12 +28,18 @@ employee_list = []
 # This is a simple bubblesort function which
 # is used and needed to meet 1 of the client requirements
 def bubbleSort(cars_sold):
-            for passnum in range(len(cars_sold)-1,0,-1):
-                if cars_sold[i]>cars_sold[i+1]:
-                    temp = cars_sold[i]
-                    cars_sold[i] = cars_sold[i+1]
-                    cars_sold[i+1] = temp
-
+    changed = True
+    while changed:
+        changed = False
+        for i in range (0, len(cars_sold)-1):
+            if cars_sold[i].cars_sold >cars_sold[i+1].cars_sold:
+                temp = cars_sold[i]
+                cars_sold[i] = cars_sold[i+1]
+                cars_sold[i+1] = temp
+                changed = True
+    #for i in cars_sold:
+        #print(i.name, i.cars_sold)
+    print(employee_list[len(employee_list)-1].name, employee_list[len(employee_list)-1].cars_sold)
 TotalCarsSold = 0
 
 ##This is the menu system for the application
@@ -46,7 +52,7 @@ while user:
     1. Add a Employee
     2. View Employee List
     3. Export Employee List
-    4. Sort Employee List - Total Cars Sold
+    4. Sort Employee List - Top sales of the week
     5. Display the total sales for the week
     6. Quit
     """)
@@ -81,9 +87,7 @@ while user:
         if len(employee_list) == 0:
             print("No Employees, press 1 to add an employee! - Then make sure to press 3 to export contents!") 
         else:
-          for item in employee_list:
-                bubbleSort({item.cars_sold})
-                print({item.cars_sold})
+            bubbleSort(employee_list)
 
     elif ans == "5":
         for item in employee_list:
