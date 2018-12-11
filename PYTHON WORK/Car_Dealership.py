@@ -4,7 +4,9 @@ class Users():
 
     def __init__(self):
         self.name = ""
-        self.cars_sold = 0
+        self.cars_sold = input
+        self.cars_sold = int
+                   
 
     def add_employee(self):
         self.name = input("Please enter the employees name ")
@@ -34,6 +36,7 @@ user=True
 while user:
     
     print ("""
+    Please choose from the list:
     1. Add a Employee
     2. View Employee List
     3. Export Employee List
