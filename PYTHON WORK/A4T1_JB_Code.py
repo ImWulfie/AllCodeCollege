@@ -3,7 +3,7 @@ import math
 import time
 
 
-
+#This function converts the inputted vallue down to 0 or 1, printing out each remainder at each stage.
 def DtoB(num):
     if num > 1 & 255:
         DtoB(num // 2)
@@ -70,6 +70,7 @@ def HtoD(hexNum):
 
 user=True
 while user:
+#Here the program outputs the menu to the user where an option can be selected.
     print ("")
     print ("""
 
@@ -88,35 +89,37 @@ while user:
     if ans == "1":
         #This calls the Denary to Binary function above
         number = int(input("Please enter a number between 1 & 255: "))
+        print("")
         DtoB(number)
-       
+
+    #This is converting Denary to Hex
     elif ans == "2":
         number = int(input("Please enter a number between 1 & 255: "))
         DtoH(number)
         
-        
+    #This is converting Binary to Hex
     elif ans == "3":
         Binary = (input("Please enter a value in Binary: "))
         BtoH(Binary)
         
-
+    #This is converting Binary to Decimal
     elif ans == "4":
         Binary = (input("Please enter a value in Binary: "))
         BtoD(Binary)
         
-       
+    #This is converting Hex to Denary
     elif ans == "5":
-        Hex = (input("Please enter a value in Hex: "))
+        Hex = (input("Please enter a value in Hex - this must be entered in Uppercase: "))
         print(HtoD(Hex))
 
-
+    #This is converting Hex to Binary
     elif ans == "6":
-        Hex = (input("Please enter a value in Hex: "))
+        Hex = (input("Please enter a value in Hex - this must be entered in Uppercase: "))
         HtoD(Hex)
         DtoB(HtoD(Hex))
  
         
-       
+    #If 7 is entered then the program will close. 
     elif ans == "7":
         exit(0)
 
