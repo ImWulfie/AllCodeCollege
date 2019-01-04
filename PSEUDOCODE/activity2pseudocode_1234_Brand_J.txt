@@ -1,0 +1,122 @@
+BEGIN
+#Set as class so it can be used throughout.
+class Users():
+
+	WR_Men = 9.58
+	ER_Men = 9.86
+	BR_Men = 9.87
+	
+	WR_Women = 10.49
+	ER_Women = 10.73
+	BR_Women = 10.99
+
+
+	PUBLIC FUNCTION init(self):
+		self.athlete_time = input OR integer 2 decimal places
+		self.athlete_initials = input (alphabetical)
+		self.athlete_lane_num = integer input
+
+	PUBLIC FUNCTION add_athlete():
+		while True:
+			print "Please enter the time of this athlete!"
+			self.athlete_time = user_input
+			if self.athlete_time is to 2 decimal places:
+				print "Please enter the initials for this athlete"
+				self.athlete_initials = user_input
+				if self.athlete_initials is alphabetical and two letters:
+					self.athlete_lane_num = user_input
+					if self.athlete_lane_num is an integer and between 1 - 8:
+						END FUNCTION
+				else:
+					print "Please enter the details again as there was an error!!"
+					return add_athlete()
+					END FUNCTION
+					
+	PUBLIC ARRAY athlete_list_male[]
+	PUBLIC ARRAY athlete_list_female[]
+					
+	PUBLIC FUNCTION Sort_Athlete_Time(athlete_time):
+		sorted = True
+		while sorted:
+			sorted = False
+				check each instance in athlete_time against one another
+				if one instance in athlete_time is > the next one in sequential order - switch places
+				once all have been sorted from lowest to highest
+					sorted = True
+	END FUNCTION
+	
+	PUBLIC FUNCTION GetAthleteMale(athlete_list_male):
+		return("Athlete Initials: " + self.athlete_initials "| Time: "  + self.athlete_time  "Lane Number: " + self.athlete_lane_num )
+		
+	PUBLIC FUNCTION GetAthleteFemale(athlete_list_female):
+		return("Athlete Initials: " + self.athlete_initials "| Time: "  + self.athlete_time  "Lane Number: " + self.athlete_lane_num )
+
+	user = True
+	while user = True:
+
+		print "Welcome user - please select from the list what you would like to do"
+		print "1. Add an athlete"
+		print "2. Sort the athlete list into order, fastest to slowest"
+		print "3. Check to see if a new record has been set!"
+		print "4. View pre-existing race list (Male or Female Specific)"
+		print "5. Quit"
+		
+		print "Please enter an option "
+		answer = input
+		
+		if answer == "1":
+			athlete = Users():
+			athlete.add_athlete()
+			print "Are these athletes male or female? Answer M or F!"
+			MorF = input
+			if MorF = "M":
+				athlete_list_male.addto(athlete) #Adds contained data to the specified male array
+			else:
+				athlete_list_female.addto(athlete) #Adds contained data to the specified female array
+				END FUNCTION
+			
+		elseif answer == "2":
+		if length of array(athlete_list_male OR athlete_list_female)  == 0:
+			print "ERROR! NO VALUES CONTAINED WITHIN EITHER ARRAYS!"
+		else:
+				Sort_Athlete_Time(athlete_list_male OR athlete_list_male)
+				END FUNCTION
+		
+		elseif answer == "3":
+		print "Are the participants of this race male or female?"
+		MorF = input
+		if MorF = "M":
+			 check athlete_list_male each instance in the array against the WR_Men & ER_Men & BR_Men
+			 if any instance in athlete_list_male is < WR_Men or ER_Men or BR_Men then a new record has been set
+				print "A new record has been set for: " + athlete that has beaten the pre-existing record(s)
+		else:
+				check athlete_list_male each instance in the array against the WR_Women & ER_Women & BR_Women
+				if any instance in athlete_list_male is < WR_Women or ER_Women or BR_Women then a new record has been set
+					print "A new record has been set for: " + athlete that has beaten the pre-existing record(s)
+					END FUNCTION
+				
+		elseif answer == "4":
+			if length of array(athlete_list_male OR athlete_list_female)  == 0:
+				print "ERROR! NO VALUES CONTAINED WITHIN EITHER ARRAYS!"
+			else:
+					print "Do you want to look up the male or female athlete list?"
+					MorF = input
+					if MorF = "M":
+						for instance in athlete_list_male:
+							print (instance.GetAthleteMale())
+					else:
+						for instance in athlete_list_female:
+							print (instance.GetAthleteFemale
+							END FUNCTION
+							
+		elseif answer == "5":
+			exit application
+			
+END
+			
+		
+		
+		
+		
+		
+		
